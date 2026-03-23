@@ -1,102 +1,81 @@
 # House Style
 
-*These rules define the author's mechanical style conventions for written works.*
+*Essential mechanical style conventions for written works. These rules apply across all document families.*
 
 ------
 
 ## Capitalization
 
-- Title case for titles, headers, and sub-headers.
-	- Use sentence case for everything else.
-- Don't capitalize job titles.
-- If the document includes a Glossary of terms, capitalize words that appear as entries in the Glossary when used in the body text.
-- The use of a colon determines capitalization rules:
-	- When a colon introduces an independent clause, the first word of that clause should be capitalized.
-	- When a colon introduces a dependent clause, the first word of the clause should not be capitalized.
-- Do not capitalize "the" before the names of newspapers and other publications, or "magazine" after the names of magazines.
+- Use Title Case for headings and subheadings.
+- Use sentence case for body text and list items.
+- Do not capitalize job titles (e.g., "the editor," "the director").
+- Capitalize the first word of a sentence, even after a colon if it introduces an independent clause.
 
 ## Numbers & Units
 
 - Spell out numbers one through nine.
-	- Spell out a number if it is the first word of a sentence, unless it's a year.
-	- Use numerals for items that are usually expressed in numerals, such as chapter and page numbers, and for precise units.
-	- When specifying a precise unit, always include the unit identifier. If the unit is uncommon, also provide a conversion to a more familiar unit.
-	- Use numerals for lists, whether or not they are formatted with list tags.
-	- Except as noted, use numerals for numbers 10 and above.
-- Percentages are always written with numerals and the percent sign: 7%.
-- Numbers with more than 3 digits use a comma: 1,000.
-- Use a dollar sign instead of writing out "dollars" when expressed as a numeral: $1 billion.
-- Rather than "over" or "under," use "more than" or "fewer than" / "less than" when referring to numbers or quantities.
+- Use numerals for 10 and above.
+- Spell out a number if it's the first word of a sentence (unless it's a year).
+- Percentages: Always use numerals with the percent sign (e.g., 7%, not "seven percent").
+- Numbers with more than three digits: Use a comma (e.g., 1,000 or 10,000).
+- Units of measurement: Include the unit identifier (e.g., "5 million dollars" or "$5M," not just "5 million").
 
 ## Punctuation
 
-- Use an Oxford comma for serialization (x, y, and z).
-- Use a comma to separate independent clauses but not dependent clauses.
-- Use semicolons to link closely related independent clauses or to separate complex list items. Semicolons are a preferred tool in this style for connecting related thoughts without starting a new sentence.
-- Use an em dash (—) to set off parenthetical statements, asides, clarifications, and mid-sentence emphasis.
-	- Do not put spaces around an em dash.
-	- Em dashes can be used freely—they are a signature part of this style—but avoid using more than two in a single sentence or more than two such sentences in a paragraph.
-- Use an en dash (–) to indicate a range of numbers or items.
-	- Do not put spaces around an en dash.
-- Use hyphens in compound adjectives, except for adverbs (i.e., words ending in "ly").
-	- Example: fine-tuned vs. finely tuned.
-- Punctuation goes outside of parentheses unless the text in parentheses is a full sentence, or there's a question or exclamation within the parenthetical.
-- Place periods and commas inside quotation marks.
-- Quotes within quotations should be placed in single quotation marks (' ').
-- If the text preceding a quote introduces the quote, include a comma before the quote.
-	- If the text before the quote leads directly into the quote, don't include a comma.
-	- Capitalize the first letter in the quote when it's a full sentence or when following "said," "says," or other introductory language.
+- Use an Oxford comma in lists (e.g., "apples, oranges, and bananas").
+- Use periods inside quotation marks (e.g., "He said, 'Hello.'" or "She said, 'I disagree.'").
+- Use a comma to separate independent clauses joined by a conjunction (e.g., "The post was long, and the audience grew tired").
+- Use a semicolon to link closely related independent clauses (e.g., "The editor was thorough; the author appreciated the attention to detail").
+- Use an em dash (—) to set off asides, clarifications, or parenthetical emphasis. No spaces around the em dash (e.g., "The project—which had been delayed for months—finally launched").
+- Use an en dash (–) to indicate ranges (e.g., "2020–2025" or "pages 10–15"). No spaces around the en dash.
+- Place periods and commas inside quotation marks; place semicolons and colons outside.
 
 ## Formatting & Emphasis
 
-- Use **bold** for key terms on first introduction, important labels, and strong emphasis within running text.
-- Use *italics* for titles of books, newspapers, periodicals, movies, TV shows, and video games; for foreign terms; and for light emphasis.
-	- Do not italicize "the" before the names of newspapers and other publications, or "magazine" after the names of magazines.
-- Never underline for emphasis.
-- Use ALL CAPS sparingly—only for strong imperatives in instructional or regulatory contexts (e.g., "DO NOT use 'Cash Out' in-game"). Do not use ALL CAPS for general emphasis.
-- When linking to another source, hyperlink 2–4 words.
-- In a technical document, call out external links with a [link] tag or similar to ensure clarity and easy scanning.
+- Use **bold** for key terms on first mention and for strong emphasis.
+- Use *italics* for titles of books, films, magazines, newspapers, and for light emphasis.
+- Never use ALL CAPS for general emphasis. Use ALL CAPS only for strong imperatives in instructional or regulatory contexts (e.g., "DO NOT remove this safety feature").
+- When hyperlinking, use 2–4 words of anchor text that describe the destination (e.g., "read this case study" instead of "click here").
 
-## Abbreviations & Definitions
+## Abbreviations
 
-- Define abbreviations on first use in the format: Full Term (ABBR). Use the abbreviation consistently thereafter.
-	- Example: "the Georgia Lottery Commission (GLC)" → "the GLC" for all subsequent uses.
-- When a term has multiple names across traditions or contexts, show alternates in parentheses on first use.
-	- Example: "The High Priestess (Popess, TdM; Priestess, CHT)."
-- If the document includes a Glossary, capitalize Glossary terms in the body text to signal that a definition is available. Only capitalize Glossary terms when used in the context described in the Glossary.
-
-## References & Citations
-
-- Cite legal, regulatory, or source references inline at the section or subsection level, not buried in footnotes.
-	- Example: "References: GA Code § 16-12-20 (2021) • O.C.G.A. § 50-27-70 (2025)"
-- Identify people by their full names on first mention; thereafter, use their last name.
-	- In newsletters, social media communications, and similar social or casual documents, use first names rather than last names.
-- Include version history and legal disclaimers where appropriate for professional or regulatory documents.
+- Define abbreviations on first use in the format: Full Term (ABBR).
+- Example: "The National Aeronautics and Space Administration (NASA) was founded in 1958."
+- Use the abbreviation consistently in all subsequent mentions (e.g., "NASA has launched many missions").
 
 ## Lists & Examples
 
-- Use bullet points for unordered information and numbered lists for sequential steps or ranked items.
-- Nest list items cleanly with consistent indentation per level.
-	- Avoid nesting more than three levels (the top level and two sub-levels).
-- When illustrating a rule or concept, provide concrete, worked examples with specific numbers and scenarios rather than abstract descriptions.
-- When multiple examples are needed, label or separate them clearly.
-- List items that are complete sentences require a period or other punctuation at the end.
-- List items that are not complete sentences do not require a closing punctuation.
+- Use bullet points for unordered information.
+- Use numbered lists for sequential steps or ranked items.
+- Keep list items parallel: if one starts with a verb, all should start with a verb.
+- List items that are complete sentences should end with a period.
+- List items that are fragments should not end with a period.
 
 ## Paragraph & Sentence Mechanics
 
-- Keep paragraphs compact: rarely more than 3–5 sentences. Often just 1–2 sentences when making a focused point.
-- Favor short-to-medium sentences. Avoid long, winding constructions.
-- Refer to companies as singular ("it" instead of "they" or "them") and teams or people within companies as plural ("they").
+- Keep paragraphs compact—typically 2–5 sentences. One or two sentences is fine for a focused point.
+- Favor short-to-medium sentences. Avoid long, convoluted constructions.
+- Refer to companies and institutions in the singular (e.g., "Google is launching a new product" not "Google are launching").
+- Refer to teams and groups of people in the plural (e.g., "The marketing team is divided on their approach").
 
 ## Words & Phrases to Avoid
 
-- Don't overuse "actually," "very," or "just" (they can often be deleted).
-- Don't overuse adverbs.
-- Avoid the following words and phrases, which are often overused or are hallmarks of AI-generated text: "Treasure trove," "Intricate tapestry," "It's essential to consider," "While navigating the complexities of," "A testament to," "Furthermore," "Consequently," "In the world of," "Let's delve into," "Look no further than," "Whether you're… or…," "A plethora of," "In conclusion," "by means of."
+The following are often overused or are hallmarks of lazy writing. Use sparingly or avoid:
+
+- "Treasure trove"
+- "Intricate tapestry"
+- "It's essential to consider"
+- "While navigating the complexities of"
+- "A testament to"
+- "Furthermore," "Consequently," "Subsequently" (use "Also," "So," "Then" instead)
+- "In the world of"
+- "Let's delve into"
+- "Look no further than"
+- "A plethora of"
+- "In conclusion" (try "To summarize" or simply end without a preamble)
+- Excessive use of "actually," "very," "really," "just" (often can be deleted)
 
 ## Processing Notes
 
-- When a rule here conflicts with a general style manual, this document takes precedence.
 - Ignore Markdown markup formatting tags when evaluating style compliance.
-- Ignore split words resulting from new-line hyphenation.
+- When this guide conflicts with your voice profile, follow your voice profile.

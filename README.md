@@ -1,148 +1,252 @@
-# Master Editor Prompt — README
+# Master Editor Prompt — Public Release
 
-The **Master Editor Prompt** below is the "brain" of this system.
-It tells the AI how to navigate the modular files, which "Document Family" to prioritize, and how to present the results for your audit.
+A modular AI editing system for writers. Define your voice once, then use it to edit any writing—blogs, essays, social posts, or technical docs.
 
-## How to Use This Prompt
+------
 
-1. Attach or Upload all your finalized .md files to the chat (or ensure they are in the project memory).
-2. Paste the text below into the "System Prompt" or as the first message in a new session.
-3. Provide your text and specify the Family and Mode.
+## What Is This?
+
+The **Master Editor Prompt** is a set of interlinked instruction files that tell an AI editor how to improve your writing while preserving *your* voice and style. Instead of starting from scratch each time, you define once, then reuse.
+
+**Core idea:** Writing has rules (clarity, consistency, structure), but those rules work best when filtered through *your* voice. This system keeps them in balance.
+
+**What it does:**
+- Audits your writing for clarity, consistency, and accuracy
+- Suggests rewrites with explanations
+- Preserves your unique voice and tone
+- Works across multiple writing types (blogs, essays, tweets, specs)
+
+**What it doesn't do:**
+- Generate new content (it edits existing writing)
+- Make style choices for you (you define your voice; it enforces it)
+- Replace human judgment (it flags issues; you decide)
+
+---
+
+## Quick Start
+
+### 1. Set Up Your System
+
+1. Clone or download the repo.
+2. Open all `.md` files together (or copy them into your chat with Claude).
+3. Start with `voice_profile_template.md`—fill it out to define your writing voice.
+
+**The .md files in order of importance:**
+- `system_core.md` — The foundational rules (read first)
+- `modes.md` — Document families and editing modes
+- Your filled-in `voice_profile.md` — Your voice (customize this)
+- `logic_blog.md`, `logic_essay.md`, `logic_social.md`, `logic_tech.md` — Family-specific rules
+- `consistency_manifesto.md` — Universal principles
+- `house_style.md` — Punctuation and formatting
+- `output_format.md` — How to receive editorial feedback
+
+### 2. Fill in Your Voice Profile
+
+Copy the blank template from `voice_profile_template.md` and fill it out. Answer questions like:
+
+- What's your tone? (Formal? Conversational? Dry?)
+- How do you address the reader?
+- What sentence structures do you favor?
+- What words feel natural to you?
+
+Save this as `voice_profile.md` and keep it updated as your style evolves.
+
+### 3. Tag Your Writing
+
+When you submit text for editing, include a tag that tells the editor what to do:
+
+```
+[TECH/REG] [STRICT: 5/5] [REFINE]
+[BLOG] [HUMOR: 2/5] [POLISH]
+[ESSAY] [DISCOVER]
+[SOCIAL] [HUMOR: 3/5] [REFINE]
+```
 
 ---
 
 ## Tagging Reference
 
-### Family Options
+### Document Families
 
-- `[TECH/REG]`
-  - `[STRICT: X/5]` — Default: 5/5
-  - `[HUMOR: X/5]` — Default: 0/5
-- `[EXPLAINER]`
-  - `[STRICT: X/5]` — Default: 2/5
-  - `[HUMOR: X/5]` — Default: 2/5
-- `[PITCH]`
-  - `[STRICT: X/5]` — Default: 2/5
-  - `[HUMOR: X/5]` — Default: 2/5
-- `[TABLETOP]`
-  - `[STRICT: X/5]` — Default: 4/5
-  - `[HUMOR: X/5]` — Default: 0/5
-  - **Optional subtype**: Append one of `/RULES`, `/DESIGN`, `/GLOSSARY`, `/LORE`
-    - `[TABLETOP/RULES]` — Core rules. Maximum precision.`[STRICT: 4/5]`
-    - `[TABLETOP/DESIGN]` — Tier breakdowns, card lists, balance docs. `[STRICT: 2/5]`
-    - `[TABLETOP/GLOSSARY]` — Term definitions. Must align exactly with rules. `[STRICT: 5/5]`
-    - `[TABLETOP/LORE]` — Flavor text, narrative bibles, worldbuilding. `[STRICT: 1/5]` `[HUMOR: 1/5]`
-  - **If no subtype is given**, `[TABLETOP/RULES]` standards apply by default:
-    - `[HUMOR: 1/5]` — Applies to lore and flavor content only.
-    - `[STRICT: 4/5]` — Overrides the subtype default. Never applies to `[OPEN]`, `[DRAFT]`, or `[PLAYTESTING]` flags—those are always preserved.
+Choose one family tag:
 
-### Mode Options
+**[TECH/REG]** — Technical documentation, specifications, regulatory text, SOPs.
+- High precision required. Default: [STRICT: 5/5], [HUMOR: 0/5]
 
-- `[DISCOVER]` — Structural critique only. No rewrites.
-- `[REFINE]` — Selective rewrites. Suggested Rewrites table with rationales.
-- `[POLISH]` — Full copyedit. Clean revised text with change log.
+**[BLOG]** — Short-form articles, blog posts, topic-focused content.
+- Engagement and clarity. Default: [STRICT: 2/5], [HUMOR: 2/5]
+
+**[ESSAY]** — Long-form writing, thesis-driven arguments, exploration.
+- Depth and nuance. Default: [STRICT: 2/5], [HUMOR: 1/5]
+
+**[SOCIAL]** — Social media posts (Twitter/X, LinkedIn, Instagram, etc.).
+- Platform norms and hooks. Default: [STRICT: 1/5], [HUMOR: 2/5]
+
+### Editing Modes
+
+Choose one mode tag:
+
+**[DISCOVER]** — Structural audit only. No rewrites. Flags clarity gaps, term drift, and questions for you. Use this to understand what needs work before diving into rewrites.
+
+**[REFINE]** — Selective rewrites. The editor flags issues and provides suggested rewrites in a table format, with rationales. Use this for developmental feedback.
+
+**[POLISH]** — Full copyedit. The editor provides a clean, revised version with a change log showing what changed. Use this as a final pass.
+
+### Optional Sliders
+
+Add these to fine-tune:
+
+**[STRICT: X/5]** — How much can the editor reshape the text?
+- 5/5 = No stylistic changes; only flag errors
+- 3/5 = Moderate reshaping for clarity
+- 1/5 = High flexibility; rewrite for flow and engagement
+
+**[HUMOR: X/5]** — What's the tone?
+- 0/5 = Strictly professional
+- 1/5 = Dry and understated
+- 2/5 = Conversational and warm (default for most)
+- 4/5 = Playful and over-the-top
 
 ---
 
 ## Example Tags
 
 ```
-[TECH/REG] [STRICT: 3/5] [REFINE]
-[EXPLAINER] [HUMOR: 2/5] [POLISH]
-[PITCH] [HUMOR: 4/5] [DISCOVER]
-[TABLETOP/RULES] [REFINE]
-[TABLETOP/DESIGN] [STRICT: 3/5] [DISCOVER]
-[TABLETOP/GLOSSARY] [POLISH]
-[TABLETOP/LORE] [HUMOR: 2/5] [POLISH]
+[TECH/REG] [STRICT: 5/5] [REFINE]
+    → Technical doc. Zero style changes. Selective rewrites only.
+
+[BLOG] [HUMOR: 3/5] [POLISH]
+    → Blog post. Playful tone. Full copyedit.
+
+[ESSAY] [STRICT: 3/5] [DISCOVER]
+    → Essay. Moderate flexibility. Structural audit only.
+
+[SOCIAL] [HUMOR: 2/5] [REFINE]
+    → Social post. Conversational tone. Suggested rewrites.
+
+[BLOG] [POLISH]
+    → Blog post using all defaults: STRICT: 2/5, HUMOR: 2/5, full copyedit.
 ```
 
 ---
 
-## Notes on Multi-Document Passes
+## How to Use This System
 
-When submitting multiple related documents simultaneously (e.g., a rules doc alongside its glossary and tier breakdown), specify the Family tag once and list the documents. Cross-document consistency is a primary audit goal for `[TABLETOP]` passes—the editor will flag discrepancies across all submitted files under `[CROSS-DOC]` in the Critical Flags section.
+### Step 1: Load the Files
+
+Attach all `.md` files to a chat with Claude (or paste them into the chat).
+
+### Step 2: Optionally, Share Your Voice Profile
+
+If you've filled in `voice_profile.md`, include it so the editor understands your preferences upfront. This makes every pass more accurate.
+
+### Step 3: Submit Your Text with a Tag
+
+Paste your text and include a tag:
+
+```
+[BLOG] [HUMOR: 2/5] [REFINE]
+
+Here's my blog post about [topic]...
+```
+
+### Step 4: Review the Feedback
+
+You'll get a report with:
+- **Executive Summary** — What this pass did
+- **Critical Flags** — Accuracy, clarity, or consistency issues
+- **Suggested Rewrites** — Specific improvements with rationales
+- **House Style & Voice Tweaks** — Minor grammar and punctuation fixes
+- **Questions for You** — Anything the editor needs clarification on
+
+### Step 5: Iterate
+
+Use [DISCOVER] for structural feedback, [REFINE] for targeted rewrites, and [POLISH] for final cleanup. You can run multiple passes.
 
 ---
 
-# Master Editor Prompt
+## The Modular System
 
-```
-## Role & Objective
+This system is built from interlinked instruction files:
 
-You are the "Lead AI Editor," a high-precision editorial system. Your goal is to improve clarity, integrity, and voice without sacrificing technical truth. You operate in two distinct phases: **Intake** and **Execution**.
+| File | Purpose |
+|------|---------|
+| `system_core.md` | The role and foundational priority |
+| `modes.md` | Document families and editing modes |
+| `logic_tech.md` | Rules for technical/regulatory writing |
+| `logic_blog.md` | Rules for blog posts |
+| `logic_essay.md` | Rules for essays |
+| `logic_social.md` | Rules for social media |
+| `voice_profile_template.md` | Template to define your voice |
+| `consistency_manifesto.md` | Universal principles for all writing |
+| `house_style.md` | US English conventions |
+| `output_format.md` | How editorial feedback is formatted |
 
-## The Modular Authority (Hierarchy)
-
-Reference these attached modules in every pass. If instructions conflict, follow this priority:
-
-1. **System Core (`system_core.md`):** The foundational rules of engagement.
-2. **Technical Integrity (`logic_tech.md`):** Non-negotiable accuracy for [TECH/REG]. Rules precision for [TABLETOP].
-3. **Creative Pitching (`logic_pitch.md`):** Hook, stakes, and market vision for [PITCH].
-4. **Instructional Clarity (`logic_explainer.md`):** Pedagogy and scaffolding for [EXPLAINER].
-5. **Tabletop Design (`logic_tabletop.md`):** Canonical terms, cross-document consistency, rules precision, and design status integrity for [TABLETOP].
-6. **Voice Profile (`voice_profile.md`):** The "Grounded Guide" persona. For [TABLETOP], applies to flavor text and lore only—not to mechanical content.
-7. **House Style (`house_style.md`):** Punctuation (US English), caps, and formatting. Applies universally, including [TABLETOP]. Do not alter canonical game terms for style.
-8. **Consistency Manifesto (`consistency_manifesto.md`):** Term mapping and the **Universal Anchor**.
-9. **Modes (`modes.md`):** Editing modes, document families, and subtype tags.
-10. **Output Formats (`output_format.md`):** Standardized editorial output schema.
-
-## Phase 1: Before performing any edits, you must:
-
-1. Identify the **Document Family**, **Subtype** (if [TABLETOP]), **Mode**, and any **Sliders** from the user's tags.
-2. Scan the text for technical/creative ambiguities, contradictions, or missing context.
-3. For [TABLETOP] documents: scan for design status flags (`[OPEN]`, `[DRAFT]`, `[PLAYTESTING]`) and note them—do not resolve them.
-4. **STOP.** Output only the "Questions for the Author" section.
-5. Do not provide rewrites or critiques until the user responds to these questions.
-
-## Phase 2: The Editorial Pass (Execution)
-
-Once questions are answered, apply the modules and output the full report.
-
-### 1. Select Document Family (per `modes.md`)
-
-- **[TECH/REG]:** Prioritize `logic_tech.md`. Strict normative language.
-- **[EXPLAINER]:** Prioritize `logic_explainer.md`. Focus on the "So What?" factor.
-- **[PITCH]:** Prioritize `logic_pitch.md`. Focus on the "Hook" and market viability.
-- **[TABLETOP]:** Prioritize `logic_tabletop.md`. Focus on canonical term enforcement, cross-document consistency, rules precision, and design status integrity. Apply `logic_tech.md` for normative language in rules sections. Apply `voice_profile.md` for flavor text and lore only.
-
-### 2. Select Editing Mode (per `modes.md`)
-
-- **[DISCOVER]:** Structural critique only. For [TABLETOP], cross-document consistency is a primary audit goal.
-- **[REFINE]:** Provide the "Suggested Rewrites" table with Ref IDs and rationales.
-- **[POLISH]:** Line-by-line copyedit. For [TABLETOP], do not alter canonical game terms for style.
-
-## Output Requirements (per `output_format.md`)
-
-Every Execution response MUST include:
-
-1. **Executive Summary:** Identify Family, Subtype (if applicable), Mode, and the primary editorial goal.
-2. **Critical Accuracy & Safety Flags:** Highlight hallucinations, technical contradictions, **Universal Anchor** violations, and—for [TABLETOP]—`[AMBIGUOUS RULE]`, `[INTERACTION: Undefined]`, `[CROSS-DOC]`, and `[PREREQ]` issues.
-3. **Suggested Rewrites Table:** Use Ref IDs (e.g., **R-01** for Refinement, **P-01** for Pitch logic, **T-01** for Tabletop rules precision).
-
-   | Ref ID | Original Text | Suggested Rewrite | Rationale |
-   | :----- | :------------ | :---------------- | :-------- |
-
-4. **House Style & Voice Tweaks:** Bulleted list of minor mechanical fixes using Ref IDs (e.g., **H-01**, **V-01**).
-5. **Questions for the Author:** Include only when a blocking ambiguity is encountered mid-pass that prevents an accurate rewrite.
-
-## Constraints
-
-- **No Flattery:** Be a grounded, honest, and concise guide.
-- **No Corporate-Speak:** Strip all buzzwords and excessive hedging.
-- **US English:** Enforce US punctuation (periods inside quotes, Oxford commas).
-- **Universal Anchor:** If any Anchor item in `consistency_manifesto.md` is violated, it must be flagged.
-- **[TABLETOP] Design Status:** Never resolve `[OPEN]`, `[DRAFT]`, or `[PLAYTESTING]` flags. Preserve them exactly. Flag only if a flagged item contradicts a decided rule elsewhere.
-- **[TABLETOP] Balance:** Never suggest changes to numeric values (costs, stats, scoring weights) based on balance judgment. Flag contradictions and arithmetic errors only.
-```
+The editor loads the relevant modules based on your tag, then audits your writing against them in order of priority.
 
 ---
 
-## Pro-Tip for Abacus/RouteLLM
+## Customization
 
-If using the RouteLLM API to power this system, the following model pairings are recommended:
+### Add or Modify Document Families
 
-- **[TECH/REG] [DISCOVER/REFINE]:** Use the current GPT. Superior at detecting logical contradictions and adhering to complex Technical Integrity constraints.
-- **[TABLETOP/RULES] or [TABLETOP/GLOSSARY] [DISCOVER/REFINE]:** Use the current GPT. The cross-document consistency audit and rules precision requirements are structurally similar to [TECH/REG].
-- **[TABLETOP/DESIGN] or [TABLETOP/LORE] [REFINE/POLISH]:** Use Claude Sonnet. Better at maintaining a specific voice and handling design rationale sections where tone matters.
-- **[EXPLAINER] [REFINE/POLISH]:** Use Claude Sonnet. Best model for capturing a specific Voice Profile and maintaining a "Grounded/Warm" tone.
-- **[POLISH] (Any Family):** Use the current GPT Mini or GPT. Highly efficient at catching House Style errors—punctuation, capitalization, term drift.
+If you write in a genre not covered (newsletters, scripts, poetry), create a new logic module (e.g., `logic_newsletter.md`) following the structure of the existing ones. Update `modes.md` to include it.
+
+### Adjust House Style
+
+Edit `house_style.md` to reflect your preferred conventions. For example, if you prefer single spaces after periods, add that rule.
+
+### Define a Team Voice
+
+If you're using this with a team, fill in `voice_profile.md` to represent your publication or organization's voice, then share it with collaborators.
+
+### Disable Rules
+
+If a rule in `consistency_manifesto.md` or `house_style.md` doesn't fit your needs, remove it or note it as an exception.
+
+---
+
+## Tips for Best Results
+
+1. **Fill out your voice profile first.** Spend 15 minutes on this; it saves hours of back-and-forth later.
+
+2. **Use [DISCOVER] for messy drafts.** If you're not sure if something works, start with a structural audit before investing in rewrites.
+
+3. **Stack passes.** A [DISCOVER] pass → [REFINE] pass → [POLISH] pass is a good workflow for important writing.
+
+4. **Be specific in questions.** If you ask the editor to review something, tell it *why* you're unsure (e.g., "This paragraph feels unclear to me" or "I'm not sure if the tone is right here").
+
+5. **Update your voice profile as you evolve.** Your voice isn't static; as you develop as a writer, update your profile to match.
+
+---
+
+## FAQ
+
+**Q: Can I use this with GPT, Claude, or other AI editors?**
+A: Yes. The system is AI-agnostic. It works best with models that follow detailed instructions (Claude, GPT-4, etc.).
+
+**Q: Do I have to fill out the voice profile?**
+A: No, but it helps. Without one, the editor will follow the default tone for your document family.
+
+**Q: Can I use this for fiction?**
+A: The system focuses on non-fiction (essays, blogs, specs, etc.). For fiction, you'd need to extend it with a `logic_fiction.md` module covering dialogue, narrative voice, and plot.
+
+**Q: What if the editor's suggestion doesn't match my voice?**
+A: That's feedback. You're not obligated to take it. The editor works for you, not the other way around.
+
+**Q: Can I use this for editing other people's writing?**
+A: Yes. Load their voice profile (if they have one) or create one that represents their goals, then use the system the same way.
+
+---
+
+## License & Attribution
+
+This is a template. Modify it, extend it, use it however you like. Credit the original author if you publish it, but otherwise—make it yours.
+
+---
+
+## Questions or Suggestions?
+
+If you find bugs, have suggestions, or want to share how you've customized this system, open an issue or reach out.
+
+Happy editing.
