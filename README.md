@@ -1,16 +1,13 @@
-# Master Editor Prompt — v1.0.0 (Public Release)
+# Master LLM Editor—v1.0.0 (Public Release)
 
-A modular, model-agnostic LLM editing system for writers. 
-Intended for individual writers who want consistent editing standards. 
-Also suitable for teams who want a shared editorial system. 
-
-Define your voice once, then reuse it to edit blogs, essays, social posts, technical documentation, and more.
+The Master LLM Editor system is a modular, model-agnostic framework designed for writers and teams who require consistent editorial standards across all their work.
+Define your voice once; then, apply it consistently to blogs, essays, social posts, and technical documentation.
 
 ---
 
 ## What Is This?
 
-The **Master Editor Prompt** is a structured set of interlinked instruction files that guide an AI editor to improve your writing while preserving *your* voice. 
+The **Master Editor System** is a structured set of interlinked instruction files that guide an LLM editor to improve your writing while preserving *your* voice. 
 Instead of rewriting instructions for every session, you define your standards once and reuse them
 
 **Core idea:** 
@@ -18,19 +15,19 @@ Writing has rules (clarity, consistency, structure), but those rules work best w
 This system keeps them in balance.
 
 **What it does:**
-- Audits your writing for clarity, consistency, and accuracy
-- Suggests rewrites with explanations
-- Preserves your unique voice and tone
-- Works across multiple writing types (blogs, essays, tweets, specs)
+- Audits your writing for clarity, consistency, and accuracy.
+- Suggests rewrites with explanations.
+- Preserves your unique voice and tone.
+- Works across multiple writing types (blogs, essays, tweets, specs).
 
 **What it doesn't do:**
-- Generate new content (it edits existing writing)
-- Make style choices for you (you define your voice; it enforces it)
-- Replace human judgment (it flags issues; you decide)
+- Generate new content (it edits existing writing).
+- Make style choices for you (you define your voice; it enforces it).
+- Replace human judgment. It flags issues—you decide.
 
 ---
 
-## Quick Start
+## Quick Setup
 
 ### 1. Set Up Your System
 
@@ -40,15 +37,15 @@ This system keeps them in balance.
 
 **Core files (order of priority):**
 
-- `system_core.md` — The foundational rules (read first)
-- `modes.md` — Document families and editing modes
-- Your filled-in `voice_profile.md` — Your voice (customize this)
-- `logic_blog.md`, `logic_essay.md`, `logic_social.md`, `logic_tech.md` — Family-specific rules
-- `consistency_manifesto.md` — Universal principles
-- `house_style.md` — Punctuation and formatting
-- `output_format.md` — How to receive editorial feedback
+- `system_core.md`—The foundational rules (read first)
+- `modes.md`—Document families and editing modes
+- Your filled-in `voice_profile.md`—Your voice (customize this)
+- `logic_blog.md`, `logic_essay.md`, `logic_social.md`, `logic_tech.md`—Family-specific rules
+- `consistency_manifesto.md`—Universal principles
+- `house_style.md`—Punctuation and formatting
+- `output_format.md`—How to receive editorial feedback
 
-***Note:** Available modules may vary by version.*
+*Available modules may vary by version.*
 
 ### 2. Fill in Your Voice Profile
 
@@ -66,9 +63,9 @@ Commit `voice_profile.md` to your repo and update it as your style evolves.
 When you submit text for editing, include a tag that tells the editor what to do:
 
 ```
-[TECH/REG] [STRICT: 5/5] [REFINE]
 [BLOG] [HUMOR: 2/5] [POLISH]
 [ESSAY] [DISCOVER]
+[TECH/REG] [STRICT: 5/5] [REFINE]
 [SOCIAL] [HUMOR: 3/5] [REFINE]
 ```
 
@@ -80,38 +77,38 @@ When you submit text for editing, include a tag that tells the editor what to do
 
 Choose exactly one family tag:
 
-**[BLOG]** — Short-form articles, blog posts, topic-focused content.
+**[BLOG]**—Short-form articles, blog posts, topic-focused content.
 - Engagement and clarity. Default: [STRICT: 2/5], [HUMOR: 2/5]
 
-**[ESSAY]** — Long-form writing, thesis-driven arguments, exploration.
+**[ESSAY]**—Long-form writing, thesis-driven arguments, exploration.
 - Depth and nuance. Default: [STRICT: 2/5], [HUMOR: 1/5]
 
-**[TECH/REG]** — Technical documentation, specifications, regulatory text, SOPs.
+**[TECH/REG]**—Technical documentation, specifications, regulatory text, SOPs.
 - High precision required. Default: [STRICT: 5/5], [HUMOR: 0/5]
 
-**[SOCIAL]** — Social media posts (Twitter/X, LinkedIn, Instagram, etc.).
-- Platform norms and hooks. Default: [STRICT: 1/5], [HUMOR: 2/5]
+**[SOCIAL]**—Social media posts (Twitter/X, LinkedIn, Instagram, etc.).
+- Platform norms and hooks. Default: [STRICT: 1/5], [HUMOR: 3/5]
 
 ### Editing Modes
 
 Choose one mode tag:
 
-**[DISCOVER]** — Structural audit only. No rewrites. Flags clarity gaps, term drift, and questions for you. Use this to understand what needs work before diving into rewrites.
+**[DISCOVER]**—Structural audit only. No rewrites. Flags clarity gaps, term drift, and questions for you. Use this to understand what needs work before diving into rewrites.
 
-**[REFINE]** — Selective rewrites. The editor flags issues and provides suggested rewrites in a table format, with rationales. Use this for developmental feedback.
+**[REFINE]**—Selective rewrites. The editor flags issues and provides suggested rewrites in a table format, with rationales. Use this for developmental feedback.
 
-**[POLISH]** — Full copyedit. The editor provides a clean, revised version with a change log showing what changed. Use this as a final pass.
+**[POLISH]**—Full copyedit. The editor provides a clean, revised version with a change log showing what changed. Use this as a final pass.
 
 ### Optional Sliders
 
 Add these to fine-tune:
 
-**[STRICT: X/5]** — How much can the editor reshape the text?
+**[STRICT: X/5]**—How much can the editor reshape the text?
 - 5/5 = Do not reshape prose; only flag errors or contradictions
 - 3/5 = Moderate reshaping for clarity
 - 1/5 = High flexibility; rewrite for flow and engagement
 
-**[HUMOR: X/5]** — What's the tone?
+**[HUMOR: X/5]**—What's the tone?
 - 0/5 = Strictly professional
 - 1/5 = Dry and understated
 - 2/5 = Conversational and warm (default for most)
@@ -146,7 +143,11 @@ Load all `.md` files into your AI session (via upload or copy/paste).
 
 Include `voice_profile.md` in the session so the editor applies your voice rules from the start.
 
-### Step 3: Submit Your Text with a Tag
+### Step 3: Include the Master Profile
+
+Include the Master Profile by copying it into the chat, or including it as a Custom Instruction set.
+
+### Step 4: Submit Your Text with a Tag
 
 Paste your text and include a tag:
 
@@ -156,18 +157,18 @@ Paste your text and include a tag:
 Here's my blog post about [topic]...
 ```
 
-### Step 4: Review the Feedback
+### Step 5: Review the Feedback
 
 You'll get a report with:
-- **Executive Summary** — What this pass did
-- **Critical Flags** — Accuracy, clarity, or consistency issues
-- **Suggested Rewrites** — Specific improvements with rationales
-- **House Style & Voice Tweaks** — Minor grammar and punctuation fixes
-- **Questions for You** — Anything the editor needs clarification on
+- **Executive Summary**—What this pass did
+- **Critical Flags**—Accuracy, clarity, or consistency issues
+- **Suggested Rewrites**—Specific improvements with rationales
+- **House Style & Voice Tweaks**—Minor grammar and punctuation fixes
+- **Questions for You**—Anything the editor needs clarification on
 
-***Note:** The exact format is defined in `output_format.md`.*
+*The exact format is defined in `output_format.md`.*
 
-### Step 5: Iterate
+### Step 6: Iterate
 
 Use [DISCOVER] for structural feedback, [REFINE] for targeted rewrites, and [POLISH] for final cleanup. You can run multiple passes.
 
@@ -379,7 +380,8 @@ If you write in a genre not covered (newsletters, scripts, poetry), create a new
 
 ### Adjust House Style
 
-Edit `house_style.md` to reflect your preferred conventions. For example, if you prefer single spaces after periods, add that rule.
+Edit `house_style.md` to reflect your preferred conventions. 
+For example, if you prefer single spaces after periods, add that rule.
 
 ### Define a Team Voice
 
@@ -405,29 +407,22 @@ If a rule in `consistency_manifesto.md` or `house_style.md` doesn't fit your nee
 
 **Q: Can I use this with GPT, Claude, or other AI editors?**
 
-A: Yes. The system is AI-agnostic. It works best with models that reliably follow structured instructions (Claude, GPT-4, etc.).
+A: Yes. The system is AI-agnostic. It works best with models that reliably follow structured instructions, such as Claude 3.5 or GPT-4.
 
 **Q: Do I have to fill out the voice profile?**
 
-A: No, but it helps. Without one, the editor will follow the default tone for your document family.
-
-**Q: Can I use this for fiction?**
-
-A: The system focuses on non-fiction (essays, blogs, specs, etc.). For fiction, you'd need to extend it with a `logic_fiction.md` module covering dialogue, narrative voice, and plot.
+A: No, but it is highly recommended. Without one, the AI Editor will follow the default tone for your chosen document family.
 
 **Q: What if the editor's suggestion doesn't match my voice?**
 
-A: That's feedback. You're not obligated to take it. The editor works for you, not the other way around.
-
-**Q: Can I use this for editing other people's writing?**
-
-A: Yes, but only if you are doing so with their explicit knowledge and permission. Load their voice profile (if they have one) or create one that represents their goals, then use the system the same way.
+A: That is feedback, not a mandate. You are not obligated to accept every suggestion. The AI Editor works for you. 
 
 ---
 
 ## License & Attribution
 
-Released under the MIT License. You are free to use, modify, merge, publish, sublicense, and distribute this software under the terms of the MIT License. See `LICENSE` for full terms.
+Released under the MIT License. You are free to use, modify, merge, publish, sublicense, and distribute this software under the terms of the MIT License. 
+See `LICENSE` for full terms.
 
 ---
 
