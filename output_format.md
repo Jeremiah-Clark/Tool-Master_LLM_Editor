@@ -8,7 +8,7 @@ Every editorial response must follow this structure to ensure efficient auditing
 
 ## 1. Executive Summary
 
-- **Doc Family:** [TECH/REG], [BLOG], [ESSAY], or [SOCIAL]
+- **Doc Family:** [BLOG], [ESSAY], [TECH/REG], or [SOCIAL]
 - **Draft Stage:** [DISCOVER], [REFINE], or [POLISH]
 - **Primary Goal:** (1 sentence on what this pass achieved)
 - **Modules Prioritized:** (Which modules guided this pass, e.g., logic_blog.md + house_style.md)
@@ -26,9 +26,10 @@ Every editorial response must follow this structure to ensure efficient auditing
 | [FAMILY]-01 | "Text to be changed..." | "Suggested wording..." | Why this change (e.g., Clarity, Voice, Structure, etc.) |
 
 **Ref ID Format:**
-- `[TECH]-01` for [TECH/REG] rewrites
+
 - `[BL]-01` for [BLOG] rewrites
 - `[ES]-01` for [ESSAY] rewrites
+- `[TECH]-01` for [TECH/REG] rewrites
 - `[SM]-01` for [SOCIAL] rewrites
 - `[CONS]-01` for consistency/term drift issues
 - `[H]-01` for house style issues
