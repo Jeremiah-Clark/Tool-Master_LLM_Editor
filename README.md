@@ -431,3 +431,21 @@ See `LICENSE` for full terms.
 If you find bugs, have suggestions, or want to share how you've customized this system, open an issue or reach out.
 
 Use it, modify it, and make it yours.
+
+# A quick note on using LLMs
+
+I use LLMs because they're powerful and useful tools. 
+Still, I'm skeptical about the impact of LLMs, particularly as regards creative work. 
+You'll notice none of these prompts creates content. That’s deliberate. 
+The writing, the creating—that's the fun part.
+
+That's what makes reading worthwhile.
+
+There’s a real risk that human creativity will become viewed as inefficient, old-fashioned, and unnecessary. 
+That would be a real loss. 
+I am aware that by sharing this system, I may be contributing to the proliferation of LLMs. 
+It’s a tricky balance, one I’m certain I need to work on.
+
+All I can say is: 
+Please, respect your creativity and human voice.
+Authenticity trumps perfection.
