@@ -436,7 +436,8 @@ Use it, modify it, and make it yours.
 
 I use LLMs because they're powerful and useful tools. 
 Still, I'm skeptical about the impact of LLMs, particularly as regards creative work. 
-You'll notice none of these prompts creates content. That’s deliberate. 
+You'll notice this system doesn't create content. 
+That’s deliberate. 
 The writing, the creating—that's the fun part.
 
 That's what makes reading worthwhile.
